@@ -11,3 +11,5 @@ Feedback
 I appreciate any feedback or suggestions. If you have any ideas or recommendations, please don't hesitate to reach out or open an issue!
 
 Stay tuned for updates, and thank you for stopping by!
+
+Thankz
