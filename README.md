@@ -7,5 +7,3 @@ The website serves as a testament to my journey in the tech realm, particularly 
 Thank you for visiting, and I hope you find my work impressive!
 
 Stay tuned for updates, and thank you for stopping by!
-
-*TESTING
