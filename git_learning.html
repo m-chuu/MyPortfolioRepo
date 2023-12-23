@@ -128,7 +128,38 @@
             <p>More learning</p>
             <p>way better [git log] method</p>
             <p><a href="https://www.udemy.com/course/git-and-github-tutorial/?referralCode=91132F334DCD0CCAA250">Git Essentials — The step-by-step guide to Git mastery | Udemy</a></p>
-            <p>http://gitforeverybody.com/</p>    
+            <p>http://gitforeverybody.com/</p>
+        <h3>⑥ Syncing Your Local Repository with GitHub</h3> 
+        <ol>
+            <li><strong>Navigate to Your Local Repository</strong>
+                <p>Command: <code>cd \Users\CHAIBENG\AI\My_Portfolio_Github</code></p>
+            </li>
+            <li><strong>Verify Remote Repository</strong>
+                <p>Command: <code>git remote -v</code></p>
+            </li>
+            <li><strong>Fetch Changes from GitHub</strong>
+                <p>Before making any changes, it's always a good idea to fetch the latest changes from GitHub. This won’t merge the changes into your local repository, but it will update your remote-tracking branches.</p>
+                <p>Command: <code>git fetch origin</code></p>
+            </li>
+            <li><strong>Check Out the Correct Branch</strong>
+                <p>Ensure you are on the correct branch. If you're unsure which branch to use, it's usually the main or master branch. You can check your current branch with:</p>
+                <p>Command: <code>git branch</code></p>
+            </li>
+            <li><strong>Pull Changes from GitHub</strong>
+                <p>Pull the changes from GitHub to your local repository. This will merge the changes from the remote branch to your local branch:</p>
+                <p>Command: <code>git pull origin [branch-name]</code></p>
+            </li>
+            <li><strong>Commit and Push Your Local Changes</strong>
+                <p>Command:</p>
+                <p><code>git add .</code></p>
+                <p><code>git commit -m "Your commit message"</code></p>
+                <p>Then, push your changes to GitHub:</p>
+                <p>Command: <code>git push origin [branch-name]</code></p>
+            </li>
+            <li><strong>Verify Sync</strong>
+                <p>Finally, verify that your local repository is in sync with your GitHub repository by visiting <a href="https://github.com/m-chuu/MyPortfolioRepo">https://github.com/m-chuu/MyPortfolioRepo</a>.</p>
+            </li>
+        </ol>
 
     </section>
 
