@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git & GitHub Crash Course Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        header, section, footer {
+            border-bottom: 2px solid #ddd;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+        h1, h2, h3 {
+            color: #444;
+        }
+        a {
+            color: #0077cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        .note {
+            background-color: #f7f7f7;
+            padding: 10px;
+            border-left: 4px solid #ddd;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- existing header content -->
+        <!-- New Link for HTML Source Code -->
+        <p><strong>HTML Source Code:</strong> <a href="https://github.com/m-chuu/MyPortfolioRepo/blob/main/git_learning.html">View on GitHub</a></p>
+        <h1>Git & GitHub Crash Course: Create a Repository From Scratch!</h1>
+        <p><a href="https://www.udemy.com/course/git-and-github-crash-course-creating-a-repository-from-scratch/">Course Link</a></p>
+    </header>
+
+    <section>
+        <h2>Intro</h2>
+        <p>30-minute free Git and GitHub crash course!</p>
+    </section>
+
+    <section>
+        <h2>Who this course is for:</h2>
+        <p>Web developers unfamiliar with Git and GitHub or those who've heard of them but don't know where to start.</p>
+    </section>
+
+    <section>
+        <h2>Core Lessons (Under 30 minutes)</h2>
+        <ul>
+            <li>Create your first repository.</li>
+            <li>Clone it to your computer and add files.</li>
+            <li>Push your changes to GitHub</li>
+            <li>See differences between old and new files</li>
+            <li>Learn command-line operations as if deploying code on a live server</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Content Highlights</h2>
+        <h3>①　What is a repository?</h3>
+        <ul>
+            <li>How do you make changes to a repo?</li>
+            <li>What are the differences in new/old files?</li>
+        </ul>
+        <div class="note">
+            <p>repo = repository (where store your stuff)</p>
+            <p>README is a front page where everyone reads.</p>
+            <p><strong>Git for Windows > I have WSL2 installed before.</strong></p>
+        </div>
+
+        <h3>② Make your changes live on GitHub</h3>
+
+        <h3>③ Repositories Terminologies:</h3>
+        <ol>
+            <li>Cloning</li>
+            <li>Staging (inside the box and about to ship over to GitHub)</li>
+            <li>Committing (It’s when take staged files and slap a “this is done” label on it before sending it to GitHub)</li>
+            <li>Repositories</li>         
+        </ol>
+
+        <div class="note">
+            <p>Pushing (Is the act of sending files from the computer to GitHub)</p>
+            <p>As of August 13, 2021, GitHub no longer accepts account passwords when authenticating Git operations. Instead, use personal access tokens (PATs) or SSH keys.</p>
+            <p>Naming difference observed—main versus master—is due to a change by GitHub in late 2020. The default branch name for new repositories changed from master to main for inclusivity.</p>
+            <p><strong>Please tell me who you are.</strong>
+                <br>Run:
+                <br>1) git config --global user.email "you@example.com"
+                <br>2) git config --global user.name "Your Name"
+            </p>
+        </div>
+
+        <h3>④ Command Line</h3>
+        <ul>
+            <li>How do you make changes to a repo?</li>
+            <li>What are the differences in new/old files?</li>
+        </ul>
+
+        <div class="note">
+            <p>git diff README.md</p>
+            <p>git log</p>
+            <p>way better [git log] method</p>
+            <p><a href="https://codingforeverybody.com/snippets/git-lg">git lg - Coding For Everybody</a></p>
+            <p>git log --topo-order --all --graph --date=local --pretty=format:'%C(green)%h%C(reset) %><(55,trunc)%s%C(red)%d%C(reset) %C(blue)[%an]%C(reset) %C(yellow)%ad%C(reset)%n'</p>
+            <p>succeeded add this to .ipconfig to the computer </p>
+            <p>Need to synchronize your local repository with the remote repository before you can push your changes. Here's how to do it:
+                <br>**Pull the Latest Changes**
+            </p>    
+            <p> git checkout 
+                <br>git checkout Commit Hash (Commit ID)
+                <br>git checkout main
+            </p>
+        </div>
+        
+        <h3>⑤ Future Learning :</h3>
+        <ul>
+            <li>SSH Keys for Git authentication</li>
+        </ul>
+
+        <div class="note">
+            <p>Plug in for Visual Studio & Learn programming language. </p>
+            <p>More learning</p>
+            <p>way better [git log] method</p>
+            <p><a href="https://www.udemy.com/course/git-and-github-tutorial/?referralCode=91132F334DCD0CCAA250">Git Essentials — The step-by-step guide to Git mastery | Udemy</a></p>
+            <p>http://gitforeverybody.com/</p>
+        </div>   
+
+        <h3>⑥ Syncing Your Local Repository with GitHub</h3> 
+        <div class="note">
+            
+        <ol>
+            <li><strong>Navigate to Your Local Repository</strong>
+                <p>Command: <code>cd \Users\CHAIBENG\AI\My_Portfolio_Github</code></p>
+            </li>
+            <li><strong>Verify Remote Repository</strong>
+                <p>Command: <code>git remote -v</code></p>
+            </li>
+            <li><strong>Fetch Changes from GitHub</strong>
+                <p>Before making any changes, it's always a good idea to fetch the latest changes from GitHub. This won’t merge the changes into your local repository, but it will update your remote-tracking branches.</p>
+                <p>Command: <code>git fetch origin</code></p>
+            </li>
+            <li><strong>Check Out the Correct Branch</strong>
+                <p>Ensure you are on the correct branch. If you're unsure which branch to use, it's usually the main or master branch. You can check your current branch with:</p>
+                <p>Command: <code>git branch</code></p>
+            </li>
+            <li><strong>Pull Changes from GitHub</strong>
+                <p>Pull the changes from GitHub to your local repository. This will merge the changes from the remote branch to your local branch:</p>
+                <p>Command: <code>git pull origin [branch-name]</code></p>
+            </li>
+            <li><strong>Commit and Push Your Local Changes</strong>
+                <p>Command:</p>
+                <p><code>git add .</code></p>
+                <p><code>git commit -m "Your commit message"</code></p>
+                <p>Then, push your changes to GitHub:</p>
+                <p>Command: <code>git push origin [branch-name]</code></p>
+            </li>
+            <li><strong>Verify Sync</strong>
+                <p>Finally, verify that your local repository is in sync with your GitHub repository by visiting <a href="https://github.com/m-chuu/MyPortfolioRepo">https://github.com/m-chuu/MyPortfolioRepo</a>.</p>
+            </li>
+        </ol>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Summary compiled from user notes. Always refer to original content for complete understanding.</p>
+    </footer>
+</body>
+</html>
+
