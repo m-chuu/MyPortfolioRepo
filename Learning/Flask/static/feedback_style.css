@@ -1,0 +1,54 @@
+body {
+    position: relative;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.2; /* 20% transparency */
+    z-index: -1;
+}
+
+/* Add styles for your main content to ensure it's on top of the background */
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    color: navy;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+select {
+    width: 200px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkblue;
+}
+

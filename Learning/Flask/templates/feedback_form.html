@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='feedback_style.css') }}">
+</head>
+<body>
+    
+    <h1>Website Feedback Form</h1>
+    <p id="feedback-message">Please provide your feedback</p>
+    <form id="feedback-form" method="post" action="/submit-feedback">
+        
+        <div class="question">
+            <p>How satisfied are you with our website overall?</p>
+            <select id="overall-satisfaction">
+                <option>Very Satisfied</option>
+                <option>Satisfied</option>
+                <option>Neutral</option>
+                <option>Dissatisfied</option>
+                <option>Very Dissatisfied</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <p>How easy was it to navigate our website?</p>
+            <select id="usability">
+                <option>Very Easy</option>
+                <option>Easy</option>
+                <option>Neutral</option>
+                <option>Difficult</option>
+                <option>Very Difficult</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <p>How would you rate the quality of the content on our website?</p>
+            <select id="content-quality">
+                <option>Excellent</option>
+                <option>Good</option>
+                <option>Average</option>
+                <option>Poor</option>
+                <option>Very Poor</option>
+            </select>
+        </div>
+
+        <button type="button" onclick="submitFeedback()">Submit</button>
+    </form>
+
+    <script src="{{ url_for('static', filename='feedback_interaction.js') }}"></script>
+</body>
+</html>
