@@ -48,24 +48,24 @@
         
         <h2>Course Highlights</h2>
         <h3>① Introduction:</h3>
-        <p>Flask uses Werkzeug for handling HTTP requests and responses, and Jinja2 for rendering HTML templates. PEP 3333 is a proposal that led to the WSGI (Web Server Gateway Interface) standard, implemented by Werkzeug.</p>
+        <p>Flask uses Werkzeug for handling HTTP requests and responses, and Jinja2 for rendering HTML templates.<br>
+        PEP 3333 is a proposal that led to the WSGI (Web Server Gateway Interface) standard, implemented by Werkzeug.</p>
         
         <h3>② API (Application Programming Interface):</h3>
         <p>Examples of JSON and XML formats used in a weather system API interaction.</p>
         <div class="note">
             <p>JSON Example:</p>
             <pre>{
-                "location": "New York",
-                "temperature": "15°C",
-                "condition": "Partly Cloudy"
-            }</pre>
+    "location": "New York",
+    "temperature": "15°C",
+    "condition": "Partly Cloudy"
+}</pre>
             <p>XML Example:</p>
             <pre><weather>
-                <location>New York</location>
-                <temperature>15°C</temperature>
-                <condition>Partly Cloudy</condition>
-            </weather>
-            </pre>
+    <location>New York</location>
+    <temperature>15°C</temperature>
+    <condition>Partly Cloudy</condition>
+</weather></pre>
         </div>
 
         <h3>④HTTP Methods:</h3>
@@ -81,8 +81,10 @@
         </ul>
 
         <h3>⑤ How It Works:</h3>
-        <p>Explanation of a Flask application running a feedback form, with JavaScript and Python Flask backend interaction.</p>
-
+        <p>Explanation of a Flask application running a feedback form, with JavaScript and Python Flask backend interaction.<br><br>
+        When you run this Flask application and navigate to http://127.0.0.1:5000/feedback, You'll see a simple feedback form. <br>
+        When the user submits feedback, a JavaScript function handles user interactions and back-end Python code (in this case, using Flask) for processing and storing the data.<br>
+        The script.js file now collects and displays the selected options in an alert box.</p>
         <h3>⑥ Challenging Aspects:</h3>
         <p>Discussion on the need for a more robust solution using a database.</p>
 
