@@ -1,6 +1,7 @@
 // Front End
 
 function submitFeedback() {
+    let userCode = document.getElementById("user-code").value;
     let overallSatisfaction = document.getElementById("overall-satisfaction").value;
     let usability = document.getElementById("usability").value;
     let contentQuality = document.getElementById("content-quality").value;
@@ -18,6 +19,7 @@ function submitFeedback() {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+            userCode: userCode,
             overallSatisfaction: overallSatisfaction,
             usability: usability,
             contentQuality: contentQuality

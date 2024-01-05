@@ -1,18 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Feedback Form</title>
+    <!-- Include your CSS file here if you have one -->
     <link rel="stylesheet" href="{{ url_for('static', filename='feedback_style.css') }}">
 </head>
 <body>
     
     <h1>Website Feedback Form</h1>
+        {% if not feedbacks %}
+        <p>Waiting for your feedbacks</p>
+        {% endif %}
+
+    <ul>
+        {% for feedback in feedbacks %}
+        <li>
+            User ID: {{ feedback.user_id }}, Satisfaction: {{ feedback.overall_satisfaction }}, Usability: {{ feedback.usability }}, Content Quality: {{ feedback.content_quality }}
+        </li>
+        {% endfor %}
+    </ul>
+        
     <p id="feedback-message">Please provide your feedback</p>
-    <form id="feedback-form" method="post" action="/submit-feedback">
+    <form id="feedback-form" method="post" action="/submit_feedback">
+
+        <div class="question">
+            <p>Please enter your user code:</p>
+            <input type="text" id="user-id" name="user-id" required>
+        </div>        
         
         <div class="question">
             <p>How satisfied are you with our website overall?</p>
-            <select id="overall-satisfaction">
+            <select id="overall-satisfaction" name="overall-satisfaction">
                 <option>Very Satisfied</option>
                 <option>Satisfied</option>
                 <option>Neutral</option>
@@ -23,7 +42,7 @@
 
         <div class="question">
             <p>How easy was it to navigate our website?</p>
-            <select id="usability">
+            <select id="usability" name="usability">
                 <option>Very Easy</option>
                 <option>Easy</option>
                 <option>Neutral</option>
@@ -34,7 +53,7 @@
 
         <div class="question">
             <p>How would you rate the quality of the content on our website?</p>
-            <select id="content-quality">
+            <select id="content-quality" name="content-quality">
                 <option>Excellent</option>
                 <option>Good</option>
                 <option>Average</option>
@@ -43,9 +62,11 @@
             </select>
         </div>
 
-        <button type="button" onclick="submitFeedback()">Submit</button>
+        <button type="submit">Submit</button>
+        <!-- <button type="button" onclick="submitFeedback()">Submit</button> -->
     </form>
 
+    <!-- Include your JavaScript file here if you have one -->
     <script src="{{ url_for('static', filename='feedback_interaction.js') }}"></script>
 </body>
 </html>
